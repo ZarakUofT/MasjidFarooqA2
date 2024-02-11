@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Masjid Website</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f3ece5; /* Light brown background */
+      color: #3d2c29; /* Dark brown text color */
+    }
+    #prayer-timings {
+      margin-top: 20px;
+    }
+    .navbar {
+      background-color: #7d3838; /* Maroon navbar */
+    }
+    .navbar-brand {
+      font-size: 34px; /* Adjust the font size as needed */
+      color: #f3ece5; /* Light brown navbar text */
+    }
+    .navbar-light .navbar-nav .nav-link {
+      color: #f3ece5; /* Light brown navbar text */
+    }
+    th, td {
+      background-color: #d9c2bb; /* Light brown table cells */
+    }
+    .sunrise-row {
+      background-color: #f1ae77;
+    }
+    #Sunrise {
+      text-align: center;
+    }
+    .btn-primary {
+      background-color: #597d38; /* Green button */
+      border-color: #597d38; /* Green button border */
+    }
+    .btn-primary:hover {
+      background-color: #4b3028; /* Slightly darker brown on hover */
+      border-color: #4b3028; /* Slightly darker brown on hover */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#" style="color: #f3ece5;">Masjid Farooq</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about-us">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact-us">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#donate">Donate</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Prayer Timings -->
+  <div class="container" id="prayer-timings">
+    <h2 class="text-center">Prayer Timings</h2>
+    <h4 class="text-center" id="todays-date"></h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Prayer</th>
+          <th>Adhan Time</th>
+          <th>Iqama Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fajr</td>
+          <td id="FajrAdhan"></td>
+          <td id="FajrIqama"></td>
+        </tr>
+        <tr>
+          <td class="sunrise-row">Sunrise</td>
+          <td id="Sunrise" class="sunrise-row" colspan="2";></td>
+        </tr>
+        <tr>
+          <td>Dhuhr</td>
+          <td id="DhuhrAdhan"></td>
+          <td id="DhuhrIqama"></td>
+        </tr>
+        <tr>
+          <td>Asr</td>
+          <td id="AsrAdhan"></td>
+          <td id="AsrIqama"></td>
+        </tr>
+        <tr>
+          <td>Maghrib</td>
+          <td id="MaghribAdhan"></td>
+          <td id="MaghribIqama"></td>
+        </tr>
+        <tr>
+          <td>Isha</td>
+          <td id="IshaAdhan"></td>
+          <td id="IshaIqama"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- About Us Section -->
+  <div class="container" id="about-us">
+    <h2 class="text-center">About Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit....</p>
+  </div>
+
+  <!-- Contact Us Section -->
+  <div class="container" id="contact-us">
+    <h2 class="text-center">Contact Us</h2>
+    <p>Email: info@masjid.com</p>
+    <p>Phone: +123 456 7890</p>
+  </div>
+
+  <!-- Donate Section -->
+  <div class="container" id="donate">
+    <h2 class="text-center">Donate</h2>
+    <p>Your support is greatly appreciated. Click the button below to donate.</p>
+    <button class="btn btn-primary" onclick="alert('Coming Soon!')">Donate Now</button>
+  </div>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+
+</body>
+</html>
