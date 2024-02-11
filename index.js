@@ -44,7 +44,8 @@ function getDhuhrIqamaTime() {
 
 async function fetchPrayerTimes() {
     try {
-        const response = await fetch('https://api.aladhan.com/v1/timingsByCity?' + new URLSearchParams({
+        dateNow = getDateNow().toLocaleString('en-GB').slice(0, 10).split('/').join('-'); // date in  DD-MM-YYYY format
+        const response = await fetch('https://api.aladhan.com/v1/timingsByCity/' + dateNow + '?' + new URLSearchParams({
             city: 'Ann Arbor',
             country: 'United States',
             state: 'MI',
