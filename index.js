@@ -68,11 +68,10 @@ async function fetchPrayerTimes() {
 }
 
 async function updatePrayerTimes() {
+    document.getElementById('todays-date').innerText = new Date().toDateString();
+    
     const prayerTimings = await fetchPrayerTimes();
-
     if (prayerTimings) {
-        document.getElementById('todays-date').innerText = new Date().toDateString();
-
         document.getElementById('FajrAdhan').innerText = get12HrTimeStr(prayerTimings.Fajr);
         document.getElementById('Sunrise').innerText = get12HrTimeStr(prayerTimings.Sunrise);
         document.getElementById('DhuhrAdhan').innerText = get12HrTimeStr(prayerTimings.Dhuhr);
