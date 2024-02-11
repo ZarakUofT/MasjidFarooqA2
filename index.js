@@ -52,9 +52,6 @@ async function fetchPrayerTimes() {
             method: 2,
         }), {
             method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
         });
 
         if (!response.ok) {
