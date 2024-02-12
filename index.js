@@ -3,8 +3,14 @@ const AsrAdhanIqamaOffsetMins = 20
 const MaghribAdhanIqamaOffsetMins = 5
 const IshaAdhanIqamaOffsetMins = 10
 
+const City = "Ann Arbor";
+const Country = "United States";
+const State = "MI";
+const Timezone = "America/Detroit";
+const ISNAMethod = 2;
+
 function getDateNow() {
-    return new Date(new Date().toLocaleString('en', {timeZone: 'America/Detroit'}))
+    return new Date(new Date().toLocaleString('en', {timeZone: Timezone}))
 }
 
 function convertToTwoDigitString(num) {
@@ -46,10 +52,10 @@ async function fetchPrayerTimes() {
     try {
         dateNow = getDateNow().toLocaleString('en-GB').slice(0, 10).split('/').join('-'); // date in  DD-MM-YYYY format
         const response = await fetch('https://api.aladhan.com/v1/timingsByCity/' + dateNow + '?' + new URLSearchParams({
-            city: 'Ann Arbor',
-            country: 'United States',
-            state: 'MI',
-            method: 2,
+            city: City,
+            country: Country,
+            state: State,
+            method: ISNAMethod,
         }), {
             method: 'GET',
         });
